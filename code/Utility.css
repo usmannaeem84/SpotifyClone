@@ -1,0 +1,33 @@
+.flex{
+    display: flex;
+}
+.justifyCenter{
+    justify-content: center;
+}
+.itemsCenter{
+    align-items: center;
+}
+.br{
+    border-radius: 0.8rem;
+}
+.invert{
+filter: invert(1);
+}
+.p1{
+    padding: 8px 12px;
+}
+.m1{
+margin: 12px 0px;
+}
+.m2{
+margin: 25px 0px;
+}
+.p2{
+padding: 4px 8px;
+}
+.gap{
+  gap: 12px;  
+}
+.spcbet{
+justify-content: space-between;
+}

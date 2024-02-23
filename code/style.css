@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    color: #fff;
+}
+
+:root {
+    --a: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+body {
+    background-color: black;
+}
+
+.left {
+    width: 22%;
+    background-color: #101010;
+
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.right {
+    background-color: #121212;
+    position: relative;
+    width: 78%;
+    min-height: 100%;
+}
+
+ul {
+    margin-top: 15px;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    width: 12px;
+    gap: 12px;
+    margin: 15px 0px;
+}
+
+ul li img {
+    width: 22px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.lib {
+    gap: 12px;
+    background-color: #212020;
+    align-items: center;
+    border: 4px;
+    padding: 12px;
+}
+
+.lib>img {
+    width: 20px;
+}
+
+.libPlus {
+    justify-content: flex-end;
+    flex: content;
+    margin-right: 20px;
+}
+
+.home {
+    background-color: #212020;
+    color: white;
+}
+
+.library {
+
+    background-color: #121212;
+    margin-top: 12px;
+
+
+}
+
+.scroll {
+    flex-direction: column;
+    margin: 18px 0px;
+    background-color: #101010;
+    color: white;
+    padding-right: 15px;
+    height: 340px;
+    overflow-y: auto;
+
+}
+
+.scroll ul {
+    padding: 0px 8px;
+}
+
+.scroll ul Li {
+    width: 100%;
+    font-size: 12px;
+    padding: 4px 8px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid white;
+    height: 55px;
+}
+
+.fa-circle-play {
+    font-size: 18px;
+}
+
+/* .playMusic{
+margin-right: 6px;
+} */
+/* For WebKit (Safari, Google Chrome etc) */
+::-webkit-scrollbar {
+    width: 5px;
+    /* width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+    /* color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    /* color of the scroll thumb */
+    border-radius: 6px;
+    /* roundness of the scroll thumb */
+}
+
+
+.library .items {
+    display: flex;
+    width: 90%;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    font-size: 12px;
+    color: gray;
+}
+
+.language {
+    font-size: 13px;
+    width: fit-content;
+    gap: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 4px 8px;
+    border-radius: 1rem;
+
+}
+
+.language img {
+    width: 15px;
+
+}
+
+header {
+    background-color: #212020;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+}
+
+nav {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.cross {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-size: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    font-size: 16px;
+    border: 0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn1 {
+    background-color: #121212;
+}
+
+.btn2 {
+    background-color: #fff;
+    color: black;
+
+}
+
+.playlist {
+    padding: 25px;
+    overflow-y: scroll;
+    height: 75vh;
+    transition: all 0.1s ease-in-out;
+
+
+}
+
+.card {
+   width: 170px;
+    margin: 15px;
+    padding:12px 8px;
+    background-color: #171717;
+    border-radius: 6px;
+    position: relative;
+    min-height: 240px;
+   
+}
+
+.card:hover {
+transition: all 0.7s ease-in;
+    background-color: #373636;
+    --a: 1;
+}
+
+.card>* {
+    padding: 3px 0px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+   
+    border-radius: 6px;
+}
+
+.card>p {
+    font-size: 14px;
+    margin: 6px 0px;
+}
+
+.cardsItem {
+    align-items: center;
+    flex-wrap: wrap;
+
+ 
+
+}
+
+.card>.fa-circle-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: fit-content;
+    color: rgb(80, 185, 80);
+    position: absolute;
+    bottom: 110px;
+    font-size: 30px;
+    right: 12px;
+    opacity: var(--a);
+    transition: all 0.3s ease-out;
+}
+
+.fa-circle-play:hover {
+
+    opacity: 1;
+}
+
+.Playbar {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0px 18px;
+    background-color: #242b20;
+    border-radius: 12px;
+    justify-content: space-around;
+
+}
+
+
+
+.Playbar .songInfo {
+    font-size: 13px;
+
+}
+
+
+.Playbar i {
+    font-size: 24px;
+
+}
+
+.Seekbar {
+    width: 98%;
+    height: 4px;
+    position: absolute;
+    background-color: rgb(223, 235, 218);
+    top: 0;
+    cursor: pointer;
+    left: 6px;
+
+
+}
+
+.circle {
+    background-color: rgb(229, 254, 221);
+    border-radius: 50%;
+    position: absolute;
+    height: 14px;
+    bottom: -5px;
+    left: 0%;
+    width: 14px;
+    transition: left 0.1s;
+}
+
+.Volume {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+}
+
+.Volume i {
+    font-size: 18px;
+}
+
+.Volume input {
+    width: 80px;
+    height: 4px;
+
+
+}
+
+
+
+@media (max-width:1100px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .left {
+        position: absolute;
+        left: -120%;
+        z-index: 3;
+        width: 65%;
+        overflow: hidden;
+        margin: 0;
+
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger {
+        display: inline;
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    .scroll {
+        height: 340px;
+    }
+
+    .scroll ul li {
+        padding: 0px 8px;
+    }
+
+    .scroll ul {
+        padding: 0px 12px;
+    }
+
+    .playlist h1 {
+        font-size: 1.9rem;
+    }
+
+    .playlist .cardsItem {
+        justify-content: center;
+
+    }
+
+    .card {
+        width: 35%;
+        box-shadow: rgba(147, 147, 159, 0.2) 0px 7px 29px 0px;
+    }
+
+    .Playbar {
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 95%;
+
+    }
+
+    .icons i {
+        margin: 4px 0px;
+        font-size: 28px;
+    }
+
+    .songInfo {
+        margin-top: 8px;
+    }
+
+    .VolTime {
+
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .Volume {
+        margin-top: 6px;
+    }
+}
+
+
+@media (max-width:570px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+
+    .left {
+        position: absolute;
+        left: -120%;
+        z-index: 3;
+        width: 92%;
+        overflow: hidden;
+        margin: 0;
+
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hamburger {
+        display: inline;
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    .scroll {
+        height: 340px;
+    }
+
+    .scroll ul li {
+        padding: 0px 8px;
+    }
+
+    .scroll ul {
+        padding: 0px 12px;
+    }
+
+    .playlist h1 {
+        font-size: 1.9rem;
+    }
+    
+    .playlist .cardsItem {
+        justify-content: center;
+
+    }
+    .card h3{
+font-size: 1.6rem;
+    }
+    .card p{
+font-size: 1.1rem;
+    }
+    .card {
+        width: 97%;
+        margin: 40px 0px;
+        min-height: 350px;
+        box-shadow: rgba(147, 147, 159, 0.2) 0px 7px 29px 0px;
+  
+    }
+
+    .Playbar {
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 88%;
+
+    }
+
+    .icons i {
+
+        font-size: 28px;
+    }
+
+    .songInfo {
+        margin-top: 8px;
+    }
+
+    .VolTime {
+
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .Volume {
+        margin-top: 6px;
+    }
+}
